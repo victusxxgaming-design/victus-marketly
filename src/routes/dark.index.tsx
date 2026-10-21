@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ScreenView } from "@/components/ScreenView";
 import * as screen from "@/screens/darkHome";
 
-export const Route = createFileRoute("/dark")({
+export const Route = createFileRoute("/dark/")({
   head: () => ({
     meta: [
       { title: "Home (dark) — Marketly" },

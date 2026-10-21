@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ScreenView } from "@/components/ScreenView";
 import * as screen from "@/screens/adminDashboard";
 
-export const Route = createFileRoute("/admin")({
+export const Route = createFileRoute("/admin/")({
   head: () => ({
     meta: [
       { title: "Admin dashboard — Marketly" },
