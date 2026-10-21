@@ -10,33 +10,245 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BrowseRouteImport } from './routes/browse'
+import { Route as CartRouteImport } from './routes/cart'
+import { Route as LibraryRouteImport } from './routes/library'
+import { Route as MobileRouteImport } from './routes/mobile'
+import { Route as ProductRouteImport } from './routes/product'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as StatesRouteImport } from './routes/states'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminOrdersRouteImport } from './routes/admin.orders'
+import { Route as AdminProductsRouteImport } from './routes/admin.products'
+import { Route as DarkIndexRouteImport } from './routes/dark.index'
+import { Route as DarkBrowseRouteImport } from './routes/dark.browse'
+import { Route as DarkProductRouteImport } from './routes/dark.product'
+import { Route as StudioIndexRouteImport } from './routes/studio.index'
+import { Route as StudioPayoutsRouteImport } from './routes/studio.payouts'
+import { Route as StudioSubmitRouteImport } from './routes/studio.submit'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrowseRoute = BrowseRouteImport.update({
+  id: '/browse',
+  path: '/browse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CartRoute = CartRouteImport.update({
+  id: '/cart',
+  path: '/cart',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LibraryRoute = LibraryRouteImport.update({
+  id: '/library',
+  path: '/library',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MobileRoute = MobileRouteImport.update({
+  id: '/mobile',
+  path: '/mobile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductRoute = ProductRouteImport.update({
+  id: '/product',
+  path: '/product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StatesRoute = StatesRouteImport.update({
+  id: '/states',
+  path: '/states',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminOrdersRoute = AdminOrdersRouteImport.update({
+  id: '/admin/orders',
+  path: '/admin/orders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProductsRoute = AdminProductsRouteImport.update({
+  id: '/admin/products',
+  path: '/admin/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DarkIndexRoute = DarkIndexRouteImport.update({
+  id: '/dark/',
+  path: '/dark/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DarkBrowseRoute = DarkBrowseRouteImport.update({
+  id: '/dark/browse',
+  path: '/dark/browse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DarkProductRoute = DarkProductRouteImport.update({
+  id: '/dark/product',
+  path: '/dark/product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudioIndexRoute = StudioIndexRouteImport.update({
+  id: '/studio/',
+  path: '/studio/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudioPayoutsRoute = StudioPayoutsRouteImport.update({
+  id: '/studio/payouts',
+  path: '/studio/payouts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudioSubmitRoute = StudioSubmitRouteImport.update({
+  id: '/studio/submit',
+  path: '/studio/submit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/browse': typeof BrowseRoute
+  '/cart': typeof CartRoute
+  '/library': typeof LibraryRoute
+  '/mobile': typeof MobileRoute
+  '/product': typeof ProductRoute
+  '/search': typeof SearchRoute
+  '/states': typeof StatesRoute
+  '/admin/orders': typeof AdminOrdersRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/dark/browse': typeof DarkBrowseRoute
+  '/dark/product': typeof DarkProductRoute
+  '/studio/payouts': typeof StudioPayoutsRoute
+  '/studio/submit': typeof StudioSubmitRoute
+  '/admin/': typeof AdminIndexRoute
+  '/dark/': typeof DarkIndexRoute
+  '/studio/': typeof StudioIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/browse': typeof BrowseRoute
+  '/cart': typeof CartRoute
+  '/library': typeof LibraryRoute
+  '/mobile': typeof MobileRoute
+  '/product': typeof ProductRoute
+  '/search': typeof SearchRoute
+  '/states': typeof StatesRoute
+  '/admin/orders': typeof AdminOrdersRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/dark/browse': typeof DarkBrowseRoute
+  '/dark/product': typeof DarkProductRoute
+  '/studio/payouts': typeof StudioPayoutsRoute
+  '/studio/submit': typeof StudioSubmitRoute
+  '/admin': typeof AdminIndexRoute
+  '/dark': typeof DarkIndexRoute
+  '/studio': typeof StudioIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/browse': typeof BrowseRoute
+  '/cart': typeof CartRoute
+  '/library': typeof LibraryRoute
+  '/mobile': typeof MobileRoute
+  '/product': typeof ProductRoute
+  '/search': typeof SearchRoute
+  '/states': typeof StatesRoute
+  '/admin/orders': typeof AdminOrdersRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/dark/browse': typeof DarkBrowseRoute
+  '/dark/product': typeof DarkProductRoute
+  '/studio/payouts': typeof StudioPayoutsRoute
+  '/studio/submit': typeof StudioSubmitRoute
+  '/admin/': typeof AdminIndexRoute
+  '/dark/': typeof DarkIndexRoute
+  '/studio/': typeof StudioIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/browse'
+    | '/cart'
+    | '/library'
+    | '/mobile'
+    | '/product'
+    | '/search'
+    | '/states'
+    | '/admin/orders'
+    | '/admin/products'
+    | '/dark/browse'
+    | '/dark/product'
+    | '/studio/payouts'
+    | '/studio/submit'
+    | '/admin/'
+    | '/dark/'
+    | '/studio/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/browse'
+    | '/cart'
+    | '/library'
+    | '/mobile'
+    | '/product'
+    | '/search'
+    | '/states'
+    | '/admin/orders'
+    | '/admin/products'
+    | '/dark/browse'
+    | '/dark/product'
+    | '/studio/payouts'
+    | '/studio/submit'
+    | '/admin'
+    | '/dark'
+    | '/studio'
+  id:
+    | '__root__'
+    | '/'
+    | '/browse'
+    | '/cart'
+    | '/library'
+    | '/mobile'
+    | '/product'
+    | '/search'
+    | '/states'
+    | '/admin/orders'
+    | '/admin/products'
+    | '/dark/browse'
+    | '/dark/product'
+    | '/studio/payouts'
+    | '/studio/submit'
+    | '/admin/'
+    | '/dark/'
+    | '/studio/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrowseRoute: typeof BrowseRoute
+  CartRoute: typeof CartRoute
+  LibraryRoute: typeof LibraryRoute
+  MobileRoute: typeof MobileRoute
+  ProductRoute: typeof ProductRoute
+  SearchRoute: typeof SearchRoute
+  StatesRoute: typeof StatesRoute
+  AdminOrdersRoute: typeof AdminOrdersRoute
+  AdminProductsRoute: typeof AdminProductsRoute
+  DarkBrowseRoute: typeof DarkBrowseRoute
+  DarkProductRoute: typeof DarkProductRoute
+  StudioPayoutsRoute: typeof StudioPayoutsRoute
+  StudioSubmitRoute: typeof StudioSubmitRoute
+  AdminIndexRoute: typeof AdminIndexRoute
+  DarkIndexRoute: typeof DarkIndexRoute
+  StudioIndexRoute: typeof StudioIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +260,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/browse': {
+      id: '/browse'
+      path: '/browse'
+      fullPath: '/browse'
+      preLoaderRoute: typeof BrowseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cart': {
+      id: '/cart'
+      path: '/cart'
+      fullPath: '/cart'
+      preLoaderRoute: typeof CartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/library': {
+      id: '/library'
+      path: '/library'
+      fullPath: '/library'
+      preLoaderRoute: typeof LibraryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mobile': {
+      id: '/mobile'
+      path: '/mobile'
+      fullPath: '/mobile'
+      preLoaderRoute: typeof MobileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product': {
+      id: '/product'
+      path: '/product'
+      fullPath: '/product'
+      preLoaderRoute: typeof ProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/states': {
+      id: '/states'
+      path: '/states'
+      fullPath: '/states'
+      preLoaderRoute: typeof StatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/orders': {
+      id: '/admin/orders'
+      path: '/admin/orders'
+      fullPath: '/admin/orders'
+      preLoaderRoute: typeof AdminOrdersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/products': {
+      id: '/admin/products'
+      path: '/admin/products'
+      fullPath: '/admin/products'
+      preLoaderRoute: typeof AdminProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dark/': {
+      id: '/dark/'
+      path: '/dark'
+      fullPath: '/dark/'
+      preLoaderRoute: typeof DarkIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dark/browse': {
+      id: '/dark/browse'
+      path: '/dark/browse'
+      fullPath: '/dark/browse'
+      preLoaderRoute: typeof DarkBrowseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dark/product': {
+      id: '/dark/product'
+      path: '/dark/product'
+      fullPath: '/dark/product'
+      preLoaderRoute: typeof DarkProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/studio/': {
+      id: '/studio/'
+      path: '/studio'
+      fullPath: '/studio/'
+      preLoaderRoute: typeof StudioIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/studio/payouts': {
+      id: '/studio/payouts'
+      path: '/studio/payouts'
+      fullPath: '/studio/payouts'
+      preLoaderRoute: typeof StudioPayoutsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/studio/submit': {
+      id: '/studio/submit'
+      path: '/studio/submit'
+      fullPath: '/studio/submit'
+      preLoaderRoute: typeof StudioSubmitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrowseRoute: BrowseRoute,
+  CartRoute: CartRoute,
+  LibraryRoute: LibraryRoute,
+  MobileRoute: MobileRoute,
+  ProductRoute: ProductRoute,
+  SearchRoute: SearchRoute,
+  StatesRoute: StatesRoute,
+  AdminOrdersRoute: AdminOrdersRoute,
+  AdminProductsRoute: AdminProductsRoute,
+  DarkBrowseRoute: DarkBrowseRoute,
+  DarkProductRoute: DarkProductRoute,
+  StudioPayoutsRoute: StudioPayoutsRoute,
+  StudioSubmitRoute: StudioSubmitRoute,
+  AdminIndexRoute: AdminIndexRoute,
+  DarkIndexRoute: DarkIndexRoute,
+  StudioIndexRoute: StudioIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

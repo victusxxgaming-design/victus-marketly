@@ -1,0 +1,7 @@
+[
+ {"capability":"code (17 Stitch HTML screens)","source":"code archive","outcome":"migrated to TanStack routes","status":"verified","next_action":null},
+ {"capability":"design tokens (per-screen Tailwind config)","source":"inline tailwind.config","outcome":"scoped CSS variables","status":"verified","next_action":null},
+ {"capability":"inline interactivity scripts","source":"page <script> + onclick","outcome":"executed after mount","status":"verified","next_action":null},
+ {"capability":"database, records, auth, payments, webhooks","source":"none (static mockups)","outcome":"not present in source","status":"accepted","next_action":"Optional: build real backend later"},
+ {"capability":"images","source":"Stitch-hosted googleusercontent URLs","outcome":"kept as remote URLs","status":"verified","next_action":null}
+]
