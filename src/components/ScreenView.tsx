@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
-import registry from "@/screens/registry.json";
+import { registry } from "@/screens/registry";
 
 type Screen = { html: string; styles: string; script: string; bodyClass: string; scope: string };
 
